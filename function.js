@@ -1,74 +1,22 @@
-// Завдання №1
-console.log('Задання № 1:');
+//Завдання №1
+console.log('Завдання №1');
 
-for (let i = 1; i <= 10; i++){
-
-    console.log(`Значення: ${i}`);
-    
-  }
-
-  // Завдання № 4 Локольна змінна
-console.log('Завдання № 4 (локальна змінна):');
-
-function local(){
-  let message = 'Hello'
-  console.log(message);
+function detect_data_type(value){
+  return typeof(value)
 }
-local();
+detect_data_type(7)
+detect_data_type('wm_school')
 
-console.log('Завдання № 4 (Зовнішня змінна):');
+console.log(detect_data_type(7));
+console.log(detect_data_type('wm_school'));
 
-let name = "Ivan"
+//Завдання №2
+console.log('Завдання №2');
 
-function external(){
-  let message = 'Hello ' + name;
-  console.log(message);
+function greatest_lowest (arr_num){
+  let min = Math.min(...arr_num)
+  let max = Math.max(...arr_num)
+  console.log(min);
+  console.log(max);
 }
-external();
-
-// Завдання № 5
-console.log('Завдання № 5:');
-
-function text (){
-  console.log('Hello Vlad!!!');
-}
-text();
-
-// Завдання № 6
-console.log('Завдання № 6:');
-
-function calsSum(x, y) {
-  console.log(`X: ${x}, Y: ${y}`);
-  return  x + y; 
-}
-let result = calsSum(10, 20);
-console.log(`Sum: ${result}`);
-
-// Завдання № 7
-console.log('Завдання № 7:');
-
-function Sum(x, y = " + Параметри за замовчуванням") {
-  console.log(`X: ${x}, Y: ${y}`);
-  return  x + y; 
-}
-let sum = Sum(10, 56); // Якщо видалити 56 то в консолі виведе 10 + Параметри за замовчуванням.
-
-console.log(`Sum: ${sum}`);
-
-
-//Розрахунок індексу маси тіла
-console.log('Розрахунок індексу маси тіла');
-
-function imt(m, h){
-  if(h > 3){
-    h = h / 100; 
-  }
-  let index = m / h ** 2;
-  index = Math.floor(index * 10) / 10;
-  return index;
-}
-
-console.log(`Vlad:  index =  ${imt(85, 1.78)}`);
-console.log(`Vlad:  index =  ${imt(85, 178)}`);
-console.log(`Oleg:  index =  ${imt(75, 2)}`);
-console.log(`Ipina: index =  ${imt(62, 165)}`);
+greatest_lowest([8, 9, 10, 11, 12])
